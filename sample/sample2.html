@@ -1,0 +1,27 @@
+<html>
+<head>
+<script src="../beehive_picker.js"></script>
+<script>
+window.onload = function(){
+  var div = document.getElementById('main');
+  var div2 = document.getElementById('main2');
+  Beehive.Picker(div, "1");
+  Beehive.Picker(div2, "2");
+  div.addEventListener('click', function(e){
+    var style = window.getComputedStyle(e.target, null);
+    console.log(style.backgroundColor);
+  });
+  div2.addEventListener('click', function(e){
+    var style = window.getComputedStyle(e.target, null);
+    console.log(style.backgroundColor);
+  });
+}
+</script>
+</head>
+<body>
+<div class="hello" id="main"></div>
+<div class="hello" id="main2"></div>
+</body>
+</html>
+
+

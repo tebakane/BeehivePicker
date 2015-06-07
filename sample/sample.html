@@ -1,0 +1,20 @@
+<html>
+<head>
+<script src="../beehive_picker.js"></script>
+<script>
+window.onload = function(){
+  var div = document.getElementById('main');
+  Beehive.Picker(div);
+  div.addEventListener('click', function(e){
+    var style = window.getComputedStyle(e.target, null);
+    console.log(style.backgroundColor);
+  });
+}
+</script>
+</head>
+<body>
+<div class="hello" id="main"></div>
+</body>
+</html>
+
+
