@@ -33,7 +33,7 @@ var Beehive = {};
     var style = window.getComputedStyle(e.target, null);
     var rgb = style.backgroundColor.match(/[0-9]+/g).map(function(n){ return Number(n); });
     var centerColor = style.backgroundColor;
-    if(rgb[0] === 255 && rgb[1] === 255 && rgb[2] === 255){ 
+    if((rgb[0] === 255 && rgb[1] === 255 && rgb[2] === 255) || (rgb[0] === 0 && rgb[1] === 0 && rgb[2] === 0)){ 
       rgb[0] = rgb[1] = rgb[2] = 127;
       centerColor = 'rgb(127,127,127)';
     }
