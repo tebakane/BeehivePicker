@@ -21,6 +21,10 @@ id: 複数のBeehivePickerを配置する場合は一意のキーをセット。
       console.log(style.backgroundColor);
     });
 
+# demo
+
+[DEMO](https://tebakane.github.io/BeehivePicker/sample.html)
+
 # image
 
 ![sample image](https://github.com/tebakane/images_for_git/blob/master/images/beehive_picker_screen_shot.png)
