@@ -31,7 +31,7 @@ var Beehive = {};
     var parentElement = element.parentElement;
     var beehiveID = parentElement.getAttribute('beehive-id');
     var style = window.getComputedStyle(e.target, null);
-    if(!style.backgroundColor.match(/^rgb/)){ return; }
+    if(!e.target.className.match(/(?:^|\s)beehive-picker(?:\s|$)/)){ return; }
     var rgb = style.backgroundColor.match(/[0-9]+/g).map(function(n){ return Number(n); });
     var centerColor = style.backgroundColor;
     if((rgb[0] === 255 && rgb[1] === 255 && rgb[2] === 255) || (rgb[0] === 0 && rgb[1] === 0 && rgb[2] === 0)){ 
@@ -111,7 +111,7 @@ var Beehive = {};
   Beehive.getColorCode = function(element){
     var style = window.getComputedStyle(element, null);
     var rgb = style.backgroundColor
-    if(!rgb.match(/^rgb/)){ return null; }
+    if(!element.className.match(/(?:^|\s)beehive-picker(?:\s|$)/)){ return null; }
     var ret = eval(rgb.replace(/rgb/,"((").replace(/,/ig,")*256+")).toString(16);
     return "#" + (("000000" + ret).substring( 6 + ret.length - 6));
   };
