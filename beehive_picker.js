@@ -125,7 +125,7 @@ document.addEventListener( 'DOMContentLoaded', function(){
   style += '.beehive-picker-main{ height: 200px; } ';
   style += '.beehive-pickers{ height: 177px; } ';
   style += '.beehive-picker { position: relative; width: 14px; height: 8.08px; margin: 2.0px 0; float: left; } ';
-  style += '.beehive-picker:before,.beehive-picker:after { content: ""; position: absolute; width: 0; border-left: 7px solid transparent; border-right: 7px solid transparent; } ';
+  style += '.beehive-picker:before,.beehive-picker:after { content: ""; position: absolute; width: 0; border-left: 7px solid transparent; border-right: 7px solid transparent; left: 0px; } ';
   style += '.beehive-picker.beehive-picker-next { clear: both; } .beehive-picker.beehive-picker1 { left: 42px; } ';
   style += '.beehive-picker.beehive-picker2 { left: 35px; } ';
   style += '.beehive-picker.beehive-picker3 { left: 28px; } ';
